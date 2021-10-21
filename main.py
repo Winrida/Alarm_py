@@ -14,3 +14,12 @@ def validate_time(alarm_time):
             return 'Неверный формат секунд, попробуйте ещё раз.'
         else:
             return 'Отлично!'
+
+
+while True:
+    alarm_time = input('Введите время в следующем формате: \'HH:MM:SS\' \nВремя будильника: ')
+    validate = validate_time(alarm_time)
+    if validate != 'Отлично!':
+        print(validate)
+    else:
+        print(f"Будильник установлен на время{alarm_time}...")
