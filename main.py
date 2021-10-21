@@ -23,3 +23,15 @@ while True:
         print(validate)
     else:
         print(f"Будильник установлен на время{alarm_time}...")
+        break
+
+alarm_hour = int(alarm_time[0:2])
+alarm_min = int(alarm_time[3:5])
+alarm_sec = int(alarm_time[6:8])
+
+while True:
+    now = datetime.now()
+
+    current_hour = now.hour
+    current_min = now.minute
+    current_sec = now.second
