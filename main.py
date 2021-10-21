@@ -22,7 +22,7 @@ while True:
     if validate != 'Отлично!':
         print(validate)
     else:
-        print(f"Будильник установлен на время{alarm_time}...")
+        print(f"Будильник установлен на время: {alarm_time}...")
         break
 
 alarm_hour = int(alarm_time[0:2])
@@ -35,3 +35,9 @@ while True:
     current_hour = now.hour
     current_min = now.minute
     current_sec = now.second
+
+    if alarm_hour == current_hour:
+        if alarm_min == current_min:
+            if alarm_sec == current_sec:
+                print('Просыпайся!')
+                break
